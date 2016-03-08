@@ -13,17 +13,17 @@ phpQGISrepository is a simple PHP script to create a repository for QGIS Python 
 * If you make plugins that are only intended for a limited number of QGIS users, **you can use this simple script** to create your own repository. 
 
 ## How to install
-* Upload all files from  this Github repository to your server that can handle PHP scripts
+* Upload all files from  this Github repository to your server that can handle PHP scripts.
 * Upload your valid QGIS Python Plugin zip-files to the 'downloads' subfolder. It already contains an example plugin. You can delete this example if you want.
-* Have a drink and enjoy your newly installed repository
+* Have a drink and enjoy your newly installed repository.
 
 ## How to use your repository
-* In your browser go to the url of the main folder you installed the script in.
-* Add the repository to QGIS
+* In your browser go to the url of the main folder you installed the script in. (This is the same url you should add in QGIS)
+* Add the repository to QGIS: "Plugins" - "Manage and install plugins..." - "Settings" - "Add...". (If you make QGIS plugins you probably already knew where to add a custom repository)
 
 ## Did you make some customisations to the plugins.xsl file?
-* Add them to this Github repository as an example for other users
+* Add them to this Github repository as an example for other users.
 
 ## How do you make a plugin?
-* More information can be found at http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/plugins.html
+* More information can be found at http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/plugins.html.
 
