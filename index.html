@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="phpQGISrepository : A simple PHP script to create a repository for QGIS Python plugins.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>phpQGISrepository</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/mstuyts/phpQGISrepository">View on GitHub</a>
+
+          <h1 id="project_title">phpQGISrepository</h1>
+          <h2 id="project_tagline">A simple PHP script to create a repository for QGIS Python plugins.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/mstuyts/phpQGISrepository/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/mstuyts/phpQGISrepository/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="phpqgisrepository" class="anchor" href="#phpqgisrepository" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>phpQGISrepository</h1>
+
+<p>phpQGISrepository is a simple PHP script to create a repository for <a href="http://qgis.org">QGIS</a> Python plugins.</p>
+
+<h2>
+<a id="good-to-know" class="anchor" href="#good-to-know" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Good to know</h2>
+
+<ul>
+<li>The script has <strong>no settings</strong>.</li>
+<li>The script is <strong>ready to go</strong>.</li>
+<li>The script needs <strong>no database</strong>.</li>
+<li>As long as your server can handle <strong>PHP</strong>-scripts you can use this both on the internet as on an intranet.</li>
+<li>Make sure the <strong>metadata.txt</strong> is filled in correct in the QGIS Python Plugin zip-files.</li>
+</ul>
+
+<h2>
+<a id="why-would-i-need-my-own-repository" class="anchor" href="#why-would-i-need-my-own-repository" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why would I need my own repository?</h2>
+
+<ul>
+<li>If you plan to share your plugins with the worldwide QGIS community, <strong>you don't need it</strong>. In that case use the official <a href="https://plugins.qgis.org/plugins/plugins.xml">QGIS Python Plugins Repository</a>.</li>
+<li>If you make plugins that are only intended for a limited number of QGIS users, <strong>you can use this simple script</strong> to create your own repository. </li>
+</ul>
+
+<h2>
+<a id="how-to-install" class="anchor" href="#how-to-install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to install</h2>
+
+<ul>
+<li>Upload all files from  this Github repository to your server that can handle PHP scripts.</li>
+<li>Upload your valid QGIS Python Plugin zip-files to the 'downloads' subfolder. It already contains an example plugin. You can delete this example if you want.</li>
+<li>Have a drink and enjoy your newly installed repository.</li>
+</ul>
+
+<h2>
+<a id="how-to-use-your-repository" class="anchor" href="#how-to-use-your-repository" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use your repository</h2>
+
+<ul>
+<li>In your browser go to the url of the main folder you installed the script in. (This is the same url you should add in QGIS)</li>
+<li>Add the repository to QGIS: "Plugins" - "Manage and install plugins..." - "Settings" - "Add...". (If you make QGIS plugins you probably already knew where to add a custom repository)</li>
+</ul>
+
+<h2>
+<a id="did-you-make-some-customisations-to-the-pluginsxsl-file" class="anchor" href="#did-you-make-some-customisations-to-the-pluginsxsl-file" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Did you make some customisations to the plugins.xsl file?</h2>
+
+<ul>
+<li>Add them with an alternative name like <em>plugins_example_flashygreen.xsl</em> to this Github repository as an example for other users.</li>
+</ul>
+
+<h2>
+<a id="how-do-you-make-a-plugin" class="anchor" href="#how-do-you-make-a-plugin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How do you make a plugin?</h2>
+
+<ul>
+<li>More information can be found at <a href="http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/plugins.html">http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/plugins.html</a>.</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">phpQGISrepository maintained by <a href="https://github.com/mstuyts">mstuyts</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
