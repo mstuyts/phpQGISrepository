@@ -5,7 +5,7 @@ phpQGISrepository is a simple PHP script to create a repository for [QGIS](http:
 * The script has **no settings**.
 * The script is **ready to go**.
 * The script needs **no database**.
-* As long as your server can handle **PHP**-scripts you can use this both on the internet as on an intranet.
+* As long as your server can handle **PHP**-scripts you can use this on the internet or on an intranet.
 * Make sure the **metadata.txt** is filled in correct in the QGIS Python Plugin zip-files.
 
 ## Why would I need my own repository?
