@@ -1,5 +1,10 @@
-# phpQGISrepository
+<h1 align="center">phpQGISrepository</h1>
+<p align="center">
 phpQGISrepository is a simple PHP script to create a repository for [QGIS](http://qgis.org) Python plugins.
+</p>
+<p align="center">
+**[Project Documentation](http://mstuyts.github.io/phpQGISrepository/)**
+</p>
 
 ## Good to know
 * The script has **no settings**.
