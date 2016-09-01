@@ -1,9 +1,9 @@
 <h1 align="center">phpQGISrepository</h1>
 <p align="center">
-phpQGISrepository is a simple PHP script to create a repository for [QGIS](http://qgis.org) Python plugins.
+phpQGISrepository is a simple PHP script to create a repository for <a href="http://qgis.org">QGIS</a> Python plugins.
 </p>
 <p align="center">
-<b>[Project Documentation](http://mstuyts.github.io/phpQGISrepository/)</b>
+<b><a href="http://mstuyts.github.io/phpQGISrepository/">Project Documentation</a></b>
 </p>
 
 ## Good to know
