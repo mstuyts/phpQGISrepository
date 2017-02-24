@@ -12,6 +12,7 @@ phpQGISrepository is a simple PHP script to create a repository for <a href="htt
 * The script needs **no database**.
 * As long as your server can handle **PHP**-scripts you can use this on the internet or on an intranet.
 * Make sure the **metadata.txt** is filled in correct in the QGIS Python Plugin zip-files.
+* The script uses QGIS 2.x as default minimum and maximum version, but is also ready for QGIS 3.x, if the metadata.txt file of your plugin has the correct information.
 
 ## Why would I need my own repository?
 * If you plan to share your plugins with the worldwide QGIS community, **you don't need it**. In that case use the official [QGIS Python Plugins Repository](https://plugins.qgis.org/plugins/plugins.xml).
