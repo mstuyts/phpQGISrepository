@@ -31,7 +31,19 @@
   }
     foreach($setting as $plugin){
       if(isset($plugin['qgisminimumversion'])){$minversion=$plugin['qgisminimumversion'];}else{$minversion="2.0";}
-      if(isset($plugin['qgismaximumversion'])){$maxversion=$plugin['qgismaximumversion'];}else{$maxversion="2.98";}
+      if(isset($plugin['qgismaximumversion'])){$maxversion=$plugin['qgismaximumversion'];}else{
+        $topversion=substr($minversion,0,1);
+        $subversion=substr($minversion,1,3);
+        if($subversion==".99"){
+          $topversion=$topversion+1;
+          $queryversion=$topversion.".00";
+          $maxversion=$topversion.".98";
+        }
+        else{
+          $maxversion=$topversion.".98";
+        }
+
+      }
       if($queryversion=="" or (version_compare($queryversion, $minversion, '>=') and version_compare($queryversion, $maxversion, '<=')) ){
          $maincontent.="\n\t<pyqgis_plugin name='".$plugin['name']."' version='".$plugin['version']."' plugin_id='".$plugin['id']."'>";
          $maincontent.="\n\t\t<description><![CDATA[".$plugin['description']."]]></description>";
