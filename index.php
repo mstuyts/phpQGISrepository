@@ -1,10 +1,11 @@
 <?php
   header ("Content-Type:text/xml");
-  $queryversion=$_GET['qgis'];
+  $queryversion=isset($_GET['qgis']) ? $_GET['qgis'] : '';;
   $filedir = 'downloads';
   $allfiles = scandir($filedir);
   natcasesort($allfiles);
   $zipcounter=0;
+  $maincontent="";
   foreach ($allfiles as $file[$zipcounter+1]){
     $zipcounter++;
      if(substr($file[$zipcounter], -4,4)==".zip"){
@@ -21,7 +22,7 @@
         $metaarray[$zipcounter]=array_filter(array_filter(array_filter(explode("\n", $metafile[$zipcounter])),"comment"),"category");
         foreach($metaarray[$zipcounter] as $settinginput){
           $settingoutput=explode("=",$settinginput);
-          $setting[$zipcounter][strtolower(trim($settingoutput[0]))]=trim($settingoutput[1]);
+          $setting[$zipcounter][@strtolower(trim($settingoutput[0]))]=@trim($settingoutput[1]);
           $setting[$zipcounter]['id']=abs(crc32($setting[$zipcounter]['name']));
         }
 
@@ -45,29 +46,29 @@
 
       }
       if($queryversion=="" or (version_compare($queryversion, $minversion, '>=') and version_compare($queryversion, $maxversion, '<=')) ){
-         $maincontent.="\n\t<pyqgis_plugin name='".$plugin['name']."' version='".$plugin['version']."' plugin_id='".$plugin['id']."'>";
-         $maincontent.="\n\t\t<description><![CDATA[".$plugin['description']."]]></description>";
-         $maincontent.="\n\t\t<about>".$plugin['about']."</about>";
-         $maincontent.="\n\t\t<version>".$plugin['version']."</version>";
+         $maincontent.="\n\t<pyqgis_plugin name='".@$plugin['name']."' version='".@$plugin['version']."' plugin_id='".@$plugin['id']."'>";
+         $maincontent.="\n\t\t<description><![CDATA[".@$plugin['description']."]]></description>";
+         $maincontent.="\n\t\t<about>".@$plugin['about']."</about>";
+         $maincontent.="\n\t\t<version>".@$plugin['version']."</version>";
          $maincontent.="\n\t\t<qgis_minimum_version>$minversion</qgis_minimum_version>";
          $maincontent.="\n\t\t<qgis_maximum_version>$maxversion</qgis_maximum_version>";
-         $maincontent.="\n\t\t<homepage><![CDATA[".$plugin['homepage']."]]></homepage>";
-         $maincontent.="\n\t\t<file_name>".$plugin['filename']."</file_name>";
+         $maincontent.="\n\t\t<homepage><![CDATA[".@$plugin['homepage']."]]></homepage>";
+         $maincontent.="\n\t\t<file_name>".@$plugin['filename']."</file_name>";
          $maincontent.="\n\t\t<icon>icon.png</icon>";
-         $maincontent.="\n\t\t<author_name><![CDATA[".$plugin['author']."]]></author_name>";
+         $maincontent.="\n\t\t<author_name><![CDATA[".@$plugin['author']."]]></author_name>";
          $maincontent.="\n\t\t<download_url>http";
          if($_SERVER['SERVER_PORT']  == 443){$maincontent.="s";}
-         $maincontent.="://$_SERVER[HTTP_HOST]/downloads/".$plugin['filename']."</download_url>";
-         $maincontent.="\n\t\t<uploaded_by><![CDATA[".$plugin['author']."]]></uploaded_by>";
-         $maincontent.="\n\t\t<create_date><![CDATA[".$plugin['create_date']."]]></create_date>";
-         $maincontent.="\n\t\t<update_date><![CDATA[".$plugin['update_date']."]]></update_date>";
-         $maincontent.="\n\t\t<experimental>".$plugin['experimental']."</experimental>";
-         $maincontent.="\n\t\t<deprecated>".$plugin['deprecated']."</deprecated>";
-         $maincontent.="\n\t\t<tracker><![CDATA[".$plugin['tracker']."]]></tracker>";
-         $maincontent.="\n\t\t<repository><![CDATA[".$plugin['repository']."]]></repository>";
-         $maincontent.="\n\t\t<tags><![CDATA[".$plugin['tags']."]]></tags>";
-         $maincontent.="\n\t\t<external_dependencies>".$plugin['external_dependencies']."</external_dependencies>";
-         $maincontent.="\n\t\t<server>".$plugin['server']."</server>";
+         $maincontent.="://$_SERVER[HTTP_HOST]/downloads/".@$plugin['filename']."</download_url>";
+         $maincontent.="\n\t\t<uploaded_by><![CDATA[".@$plugin['author']."]]></uploaded_by>";
+         $maincontent.="\n\t\t<create_date><![CDATA[".@$plugin['create_date']."]]></create_date>";
+         $maincontent.="\n\t\t<update_date><![CDATA[".@$plugin['update_date']."]]></update_date>";
+         $maincontent.="\n\t\t<experimental>".@$plugin['experimental']."</experimental>";
+         $maincontent.="\n\t\t<deprecated>".@$plugin['deprecated']."</deprecated>";
+         $maincontent.="\n\t\t<tracker><![CDATA[".@$plugin['tracker']."]]></tracker>";
+         $maincontent.="\n\t\t<repository><![CDATA[".@$plugin['repository']."]]></repository>";
+         $maincontent.="\n\t\t<tags><![CDATA[".@$plugin['tags']."]]></tags>";
+         $maincontent.="\n\t\t<external_dependencies>".@$plugin['external_dependencies']."</external_dependencies>";
+         $maincontent.="\n\t\t<server>".@$plugin['server']."</server>";
          $maincontent.="\n\t</pyqgis_plugin>";
        }
     }
