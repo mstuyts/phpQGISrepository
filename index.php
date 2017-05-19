@@ -58,7 +58,11 @@
          $maincontent.="\n\t\t<author_name><![CDATA[".@$plugin['author']."]]></author_name>";
          $maincontent.="\n\t\t<download_url>http";
          if($_SERVER['SERVER_PORT']  == 443){$maincontent.="s";}
-         $maincontent.="://$_SERVER[HTTP_HOST]/downloads/".@$plugin['filename']."</download_url>";
+         $folder=strtok($_SERVER["REQUEST_URI"],'?');
+         if(substr($folder, -9,9)=="index.php"){
+             $folder=substr($folder, 0,-9);
+         }
+         $maincontent.="://".$_SERVER['HTTP_HOST'].$folder."downloads/".@$plugin['filename']."</download_url>";
          $maincontent.="\n\t\t<uploaded_by><![CDATA[".@$plugin['author']."]]></uploaded_by>";
          $maincontent.="\n\t\t<create_date><![CDATA[".@$plugin['create_date']."]]></create_date>";
          $maincontent.="\n\t\t<update_date><![CDATA[".@$plugin['update_date']."]]></update_date>";
