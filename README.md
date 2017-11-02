@@ -31,5 +31,5 @@ phpQGISrepository is a simple PHP script to create a repository for <a href="htt
 * Add them with an alternative name like *plugins_example_flashygreen.xsl* to this Github repository as an example for other users.
 
 ## How do you make a plugin?
-* More information can be found at http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/plugins.html.
+* More information can be found at http://docs.qgis.org/2.18/en/docs/pyqgis_developer_cookbook/plugins.html.
 
