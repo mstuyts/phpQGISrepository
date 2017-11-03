@@ -20,7 +20,7 @@ phpQGISrepository is a simple PHP script to create a repository for <a href="htt
 
 ## How to install
 * Upload all files from  this Github repository to your server that can handle PHP scripts.
-* Upload your valid QGIS Python Plugin zip-files to the 'downloads' subfolder. It already contains an example plugin. You can delete this example if you want.
+* Upload your valid QGIS Python Plugin zip-files to the 'downloads' subfolder. It already contains an example plugin. You can delete this example if you want. **Make sure the name of the zip-file is the same as the main directory in the zip-file: for example if the main directory in your zip-file is called MyPlugin, your zip-file should be named MyPlugin.zip.**
 * Have a drink and enjoy your newly installed repository.
 
 ## How to use your repository
